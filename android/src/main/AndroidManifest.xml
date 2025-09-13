@@ -1,2 +1,24 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.harvi.capacitor.tuya">
+
+    <application>
+        <!-- AppKey / AppSecret della tua App su Tuya IoT Platform -->
+        <meta-data android:name="TUYA_SMART_APPKEY"  android:value="TUYA_APP_KEY" />
+        <meta-data android:name="TUYA_SMART_SECRET"  android:value="TUYA_APP_SECRET" />
+    </application>
+
+    <!-- Permessi tipici per pairing Wi-Fi/BLE -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+
+    <!-- Location (necessaria per scan BLE e alcune discovery) -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <!-- Bluetooth: nuovi permessi per Android 12+ -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
 </manifest>

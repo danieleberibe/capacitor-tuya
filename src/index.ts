@@ -2,7 +2,7 @@ import { registerPlugin } from '@capacitor/core';
 
 import type { TuyaPluginPlugin } from './definitions';
 
-const TuyaPlugin = registerPlugin<TuyaPluginPlugin>('TuyaPlugin', {
+const TuyaPlugin = registerPlugin<TuyaPluginPlugin>('CapacitorTuya', {
   web: () => import('./web').then((m) => new m.TuyaPluginWeb()),
 });
 

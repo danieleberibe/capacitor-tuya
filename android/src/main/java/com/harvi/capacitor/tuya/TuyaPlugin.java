@@ -8,4 +8,8 @@ public class TuyaPlugin {
         Log.i("Echo", value);
         return value;
     }
+
+    public void init() {
+        Log.i("TuyaPlugin", "TuyaPlugin initialized");
+    }
 }
